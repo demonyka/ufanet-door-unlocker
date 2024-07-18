@@ -1,9 +1,14 @@
 import telebot
 from telebot import types
 import importlib
+from dotenv import load_dotenv
+import os
 
-# Замените 'YOUR_BOT_API_KEY' на ваш ключ API от BotFather
-API_KEY = '7466245568:AAFiodDer1J32IoXR1GxOlGMjX5TU-_2erg'
+# Загрузить переменные окружения из файла .env
+load_dotenv()
+
+# Получить токен из переменной окружения
+API_KEY = os.getenv('TELEGRAM_API_KEY')
 bot = telebot.TeleBot(API_KEY)
 
 # Обработчик команды /start
