@@ -42,4 +42,4 @@ def openDoor(door):
         print(f"Модуль {module_name} не имеет функции open()")
 
 # Запуск бота
-bot.polling()
+bot.infinity_polling()
